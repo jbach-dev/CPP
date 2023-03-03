@@ -6,16 +6,15 @@
 #    By: jbach <jbach@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/08 19:46:35 by jbach             #+#    #+#              #
-#    Updated: 2022/10/17 14:38:31 by jbach            ###   ########.fr        #
+#    Updated: 2022/10/17 19:28:55 by jbach            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = weapon
+NAME = replace
 
-FILES =	Weapon.cpp\
-		HumanA.cpp\
-		HumanB.cpp\
-		main.cpp
+FILES =	main.cpp\
+	Replace.cpp\
+	tester.cpp
 
 CC = c++
 

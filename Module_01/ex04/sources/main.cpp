@@ -5,23 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 21:14:25 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/10 18:16:30 by jbach            ###   ########.fr       */
+/*   Created: 2022/10/17 17:10:53 by jbach             #+#    #+#             */
+/*   Updated: 2022/10/18 17:43:55 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+//TODO: un programme qui prend 3 params (nom fichier, s1, s2):
+// 2. ouvrir le fichier <filename>  et copier le contenu dans <filename>.replace
+// 3. Chaque occurance de s1 sera remplacee par s2
+// 4. Gestion erreur
 
-int main()
+#include "Replace.hpp"
+
+int main(int argc, char **argv)
 {
-	Zombie	*Sam;
-	Zombie	*Clover;
-	Sam = newZombie("Sam");
-	Clover = newZombie("Clover");
-	Sam->announce();
-	Clover->announce();
-	randomChump("Alex");
-	delete Sam;
-	delete Clover;
-	return (1);
+	if (argc != 4)
+	{
+		std::cout << RED << "Replace need 4 arguments" << std::endl << WHITE;
+		return (0);
+	}
+	replace(argv[1], argv[2], argv[3]);
 }
+
+// int main()
+// {
+// 	main_tester();
+// }

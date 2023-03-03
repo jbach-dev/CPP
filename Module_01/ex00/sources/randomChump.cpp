@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 21:14:25 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/10 18:16:30 by jbach            ###   ########.fr       */
+/*   Created: 2022/09/07 18:21:30 by jbach             #+#    #+#             */
+/*   Updated: 2022/09/13 23:51:37 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+void	randomChump(std::string name)
 {
-	Zombie	*Sam;
-	Zombie	*Clover;
-	Sam = newZombie("Sam");
-	Clover = newZombie("Clover");
-	Sam->announce();
-	Clover->announce();
-	randomChump("Alex");
-	delete Sam;
-	delete Clover;
-	return (1);
+	Zombie randomZombie(name);
+	randomZombie.announce();
 }

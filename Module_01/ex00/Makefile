@@ -6,13 +6,15 @@
 #    By: jbach <jbach@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/08 19:46:35 by jbach             #+#    #+#              #
-#    Updated: 2022/10/19 18:38:57 by jbach            ###   ########.fr        #
+#    Updated: 2022/10/10 18:22:14 by jbach            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = zombie
 
-FILES =	Fixed.cpp\
+FILES =	Zombie.cpp\
+		newZombie.cpp\
+		randomChump.cpp\
 		main.cpp
 
 CC = c++

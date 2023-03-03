@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 20:11:38 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/12 20:19:41 by jbach            ###   ########.fr       */
+/*   Created: 2022/10/17 17:19:16 by jbach             #+#    #+#             */
+/*   Updated: 2022/10/17 19:28:48 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef REPLACE_H
+# define REPLACE_H
 #include <iostream>
+#include <fstream>
+#include <cstring>
+#include <string>
 # define GRN "\e[0;32m"
 # define CYAN "\e[1;96m"
 # define PURPLE "\e[1;95m"
@@ -22,18 +27,7 @@
 # define YEL "\e[0;33m"
 # define BGRN "\e[1;32m"
 
-int main()
-{
-	std::string str;
-	str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
-	std::cout << PURPLE << "Address of str = " <<  &str << WHITE << std::endl;
-	std::cout << CYAN << "Address of stringPTR = " << &stringPTR << WHITE  << std::endl;
-	std::cout << BLUE << "Address of stringREF = " << &stringREF << WHITE  << std::endl << std::endl;
-	std::cout << PURPLE << "str = " << str << WHITE  << std::endl;
-	std::cout << CYAN << "stringPTR = " << *stringPTR << WHITE  << std::endl;
-	std::cout << BLUE << "stringREF = " << stringREF << WHITE  << std::endl;
+void	replace(std::string filename, std::string s1,std::string s2);
+void	main_tester();
 
-	return (0);
-}
+#endif

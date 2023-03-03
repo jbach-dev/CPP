@@ -1,15 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 20:11:38 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/12 20:19:41 by jbach            ###   ########.fr       */
+/*   Created: 2022/10/10 18:28:14 by jbach             #+#    #+#             */
+/*   Updated: 2022/10/11 09:04:18 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIE_H
+# define ZOMBIE_H
+#include <string>
 #include <iostream>
 # define GRN "\e[0;32m"
 # define CYAN "\e[1;96m"
@@ -22,18 +25,18 @@
 # define YEL "\e[0;33m"
 # define BGRN "\e[1;32m"
 
-int main()
-{
-	std::string str;
-	str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
-	std::cout << PURPLE << "Address of str = " <<  &str << WHITE << std::endl;
-	std::cout << CYAN << "Address of stringPTR = " << &stringPTR << WHITE  << std::endl;
-	std::cout << BLUE << "Address of stringREF = " << &stringREF << WHITE  << std::endl << std::endl;
-	std::cout << PURPLE << "str = " << str << WHITE  << std::endl;
-	std::cout << CYAN << "stringPTR = " << *stringPTR << WHITE  << std::endl;
-	std::cout << BLUE << "stringREF = " << stringREF << WHITE  << std::endl;
+class Zombie {
+public:
+	void	announce(void) const;
+	std::string getName(void) const;
+	void	setName(std::string name);
+	Zombie(void);
+	~Zombie(void);
 
-	return (0);
-}
+private:
+	std::string	_name;
+};
+
+Zombie	*zombieHorde(int N, std::string name);
+
+#endif

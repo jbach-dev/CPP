@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Define.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 17:44:10 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/19 17:45:42 by jbach            ###   ########.fr       */
+/*   Created: 2022/10/18 15:39:17 by jbach             #+#    #+#             */
+/*   Updated: 2022/10/18 16:00:55 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEFINE_H
-#define DEFINE_H
+#include "Harl.hpp"
 
-# define GRN "\e[0;32m"
-# define CYAN "\e[1;96m"
-# define PURPLE "\e[1;95m"
-# define BLUE "\e[1;94m"
-# define RED "\e[1;91m"
-# define WHITE "\e[0;37m"
-# define BWHT "\e[1;37m"
-# define UBLU "\e[4;34m"
-# define YEL "\e[0;33m"
-# define BGRN "\e[1;32m"
-
-#endif
+int main(int argc, char **argv)
+{
+	Harl harl;
+	if (argc != 2)
+		std::cout << RED << "Harl only accept two arguments !" << std::endl << WHITE;
+	else
+	{
+		harl.complain(argv[1]);
+	}
+	return (1);
+}

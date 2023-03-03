@@ -6,13 +6,14 @@
 #    By: jbach <jbach@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/08 19:46:35 by jbach             #+#    #+#              #
-#    Updated: 2022/10/19 18:38:57 by jbach            ###   ########.fr        #
+#    Updated: 2022/10/18 16:46:14 by jbach            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = zombiehorde
 
-FILES =	Fixed.cpp\
+FILES =	Zombie.cpp\
+		zombieHorde.cpp\
 		main.cpp
 
 CC = c++

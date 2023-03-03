@@ -6,15 +6,13 @@
 #    By: jbach <jbach@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/08 19:46:35 by jbach             #+#    #+#              #
-#    Updated: 2022/10/17 14:38:31 by jbach            ###   ########.fr        #
+#    Updated: 2022/10/18 15:39:43 by jbach            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = weapon
+NAME = HarlFilter
 
-FILES =	Weapon.cpp\
-		HumanA.cpp\
-		HumanB.cpp\
+FILES =	Harl.cpp\
 		main.cpp
 
 CC = c++

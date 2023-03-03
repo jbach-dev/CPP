@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 15:39:22 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/24 14:02:54 by jbach            ###   ########.fr       */
+/*   Created: 2022/10/12 20:22:48 by jbach             #+#    #+#             */
+/*   Updated: 2022/10/17 15:43:32 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_H
-# define POINT_H
+#ifndef HUMANA_H
+# define HUMANA_H
 #include <string>
+#include "Weapon.hpp"
 #include <iostream>
-#include <math.h>
-#include <Fixed.hpp>
-#include <Define.hpp>
+# define GRN "\e[0;32m"
+# define CYAN "\e[1;96m"
+# define PURPLE "\e[1;95m"
+# define BLUE "\e[1;94m"
+# define RED "\e[1;91m"
+# define WHITE "\e[0;37m"
+# define BWHT "\e[1;37m"
+# define UBLU "\e[4;34m"
+# define YEL "\e[0;33m"
+# define BGRN "\e[1;32m"
 
-class Point {
+class HumanA {
 public:
-	Point(void);
-	Point(float const &nb1, float const &nb2);
-	~Point(void);
-	Point (Point const & src);
-	Point &operator=(Point const & rhs);
-	const Fixed &getX(void) const;
-	const Fixed &getY(void) const;
-
+	HumanA(std::string name, Weapon &Weapon);
+	~HumanA(void);
+	void	attack(void) const;
 
 private:
-	Fixed _x;
-	Fixed _y;
+	std::string	_name;
+	Weapon		*_weapon;
 };
-
-bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

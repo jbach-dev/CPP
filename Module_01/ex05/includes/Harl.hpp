@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 15:39:22 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/20 16:49:53 by jbach            ###   ########.fr       */
+/*   Created: 2022/10/18 15:26:02 by jbach             #+#    #+#             */
+/*   Updated: 2022/10/18 15:30:52 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef HARL_H
+# define HARL_H
 #include <string>
 #include <iostream>
-#include <math.h>
+# define GRN "\e[0;32m"
+# define CYAN "\e[1;96m"
+# define PURPLE "\e[1;95m"
+# define BLUE "\e[1;94m"
+# define RED "\e[1;91m"
+# define WHITE "\e[0;37m"
+# define BWHT "\e[1;37m"
+# define UBLU "\e[4;34m"
+# define YEL "\e[0;33m"
+# define BGRN "\e[1;32m"
 
-class Fixed {
+class Harl {
 public:
-	Fixed(void);
-	Fixed(int const i);
-	Fixed(float const f);
-	Fixed (Fixed const & src);
-	Fixed &operator=(Fixed const & rhs);
-	~Fixed(void);
-	float	toFloat(void) const;
-	int	toInt(void) const;
-	int	getRawBits(void) const;
-	void	setRawBits(int const raw);
-	int	getBitsFrac(void) const;
+	Harl(void);
+	~Harl(void);
+	void	complain(std::string level);
 
 private:
-	int	_fixed_point;
-	static int const	_nb_bits_frac = 8;
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
 };
-
-std::ostream &operator << (std::ostream &o, Fixed const & i);
 
 #endif

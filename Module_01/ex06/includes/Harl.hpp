@@ -1,15 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 20:11:38 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/12 20:19:41 by jbach            ###   ########.fr       */
+/*   Created: 2022/10/18 15:39:22 by jbach             #+#    #+#             */
+/*   Updated: 2022/10/18 15:46:29 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HARL_H
+# define HARL_H
+#include <string>
 #include <iostream>
 # define GRN "\e[0;32m"
 # define CYAN "\e[1;96m"
@@ -22,18 +25,17 @@
 # define YEL "\e[0;33m"
 # define BGRN "\e[1;32m"
 
-int main()
-{
-	std::string str;
-	str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
-	std::cout << PURPLE << "Address of str = " <<  &str << WHITE << std::endl;
-	std::cout << CYAN << "Address of stringPTR = " << &stringPTR << WHITE  << std::endl;
-	std::cout << BLUE << "Address of stringREF = " << &stringREF << WHITE  << std::endl << std::endl;
-	std::cout << PURPLE << "str = " << str << WHITE  << std::endl;
-	std::cout << CYAN << "stringPTR = " << *stringPTR << WHITE  << std::endl;
-	std::cout << BLUE << "stringREF = " << stringREF << WHITE  << std::endl;
+class Harl {
+public:
+	Harl(void);
+	~Harl(void);
+	void	complain(std::string level);
 
-	return (0);
-}
+private:
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
+};
+
+#endif

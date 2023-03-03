@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbach <jbach@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 15:39:22 by jbach             #+#    #+#             */
-/*   Updated: 2022/10/24 14:02:04 by jbach            ###   ########.fr       */
+/*   Created: 2022/10/17 14:26:04 by jbach             #+#    #+#             */
+/*   Updated: 2022/10/17 16:51:09 by jbach            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
-#include <string>
-#include <iostream>
+#include "Weapon.hpp"
 
-class Fixed {
-public:
-	Fixed(void);
-	Fixed (Fixed const & src);
-	Fixed &operator=(Fixed const & rhs);
-	~Fixed(void);
-	int	getRawBits(void) const;
-	void	setRawBits(int const raw);
-	int	getBitsFrac(void) const;
+Weapon::Weapon(std::string weapon) : _type(weapon)
+{
+	return;
+}
 
-private:
-	int	_fixed_point;
-	int	_nb_bits_frac;
-};
+Weapon::~Weapon(void){
+	return;
+}
 
-#endif
+std::string	Weapon::getType(void) const
+{
+	return (this->_type);
+}
+
+void	Weapon::setType(std::string type)
+{
+	if (type == "")
+		return;
+	this->_type = type;
+	return;
+}
